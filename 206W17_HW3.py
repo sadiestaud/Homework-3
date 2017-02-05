@@ -2,8 +2,8 @@ import unittest
 import re
 
 ## SI 206 - W17 - HW3
-## COMMENT WITH: Sadie Staudacher
-## Your section day/time:
+## COMMENT WITH: 
+## Your section day/time: Friday 9 AM
 ## Any names of people you worked with on this assignment:
 
 #####################
@@ -19,7 +19,12 @@ import re
 # parse_counted_words('101 dalmations!') should return ('101', 'dalmations') ...
 
 ## Write code to define your parse_counted_words function here.
-
+def parse_counted_words(x):
+    y = re.findall("(\d+)\s([^A-Z]?[a-z]+)", x)
+    if len(y) > 0:
+        return y[-1]
+    else:
+        return None
 
 
 
