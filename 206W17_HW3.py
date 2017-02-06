@@ -37,8 +37,8 @@ lines = f.read()
 y = re.findall("\.\w+", lines)
 file_paths_num = len(y)
 ## (b) Write Python code to determine how many of these paths are FULL paths, not relative paths. Save that number in the variable full_paths_num.
-# y = re.findall("^\/|~", lines)
-
+y = re.findall("(~\/|\/Users)", lines)
+full_paths_num = len(y)
 
 ## (c) Write Python code to determine how many of these paths describe a Python file saved inside a folder called SI206. Save that number in the variable python_course_paths.
 y = re.findall("Jackie\/Documents\/(SI206)", lines)
