@@ -10,6 +10,12 @@ import re
 
 
 ## PART 1: 300 points
+def parse_counted_words(x):
+    y = re.findall("(\d+)\s([^A-Z]?[a-z]+)", x)
+    if len(y) > 0:
+        return y[-1]
+    else:
+        return None
 
 
 ## Use regular expressions to define a function called parse_counted_words which should accept a string, find strings of the form: <count> <word>  e.g. 101 Dalmations, inside it, and should return either the LAST correctly matching number-word combo in the string as a tuple, e.g. ('13', "pineapples"), if there are any such sub-strings, or None, if there are not.
